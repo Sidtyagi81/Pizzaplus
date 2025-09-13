@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import {
   DollarSign,
   Users,
@@ -103,7 +102,7 @@ const LandingPage = () => {
                 </p>
                 
                 <p>
-                  Fresh ingredients, authentic recipes, and unbeatable prices — that's our promise to you.
+                  Fresh ingredients, authentic recipes, and unbeatable prices — that&apos;s our promise to you.
                 </p>
               </motion.div>
 
@@ -642,7 +641,7 @@ const LandingPage = () => {
 
             {/* Combos */}
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-8 text-yellow-400 text-center">COMBO'S</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-8 text-yellow-400 text-center">COMBO&apos;S</h3>
               <div className="grid grid-cols-1 gap-6">
                 {[
                   { 
