@@ -1,21 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
 
 const Menu = () => {
   const menuSections = [
@@ -84,57 +67,48 @@ const Menu = () => {
         { name: 'Single Topping Pizza', desc: 'Choose Single (Onion, Tomato, Capsicum, Sweet Corn)', price: '80/-' },
         { name: 'Double Topping Pizza', desc: 'Choose Double (Onion, Paneer, Sweet Corn, Green Chilli)', price: '90/-' },
         { name: 'Triple Topping Pizza', desc: 'Choose Triple (Onion, Tomato, Capsicum, Green Chilli)', price: '99/-' },
-        { name: 'Margherita',desc: '(Double Cheese)', price: '160/-' },
+        { name: 'Margherita', desc: '(Double Cheese)', price: '160/-' },
       ],
     },
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 md:px-24 relative" id="menu">
+    <section className="py-16 px-4 sm:px-6 md:px-16 relative" id="menu">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/90 to-black blur-3xl"></div>
       <div className="max-w-7xl mx-auto relative">
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-transparent bg-clip-text"
-        >
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-transparent bg-clip-text">
           Our Complete Menu
-        </motion.h2>
-
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="space-y-16"
-        >
+        </h2>
+  
+        <div className="space-y-12 sm:space-y-16">
           {menuSections.map((section, idx) => (
-            <div key={idx}>
-              <h3 className="text-xl sm:text-2xl font-bold mb-8 text-yellow-400 text-center">{section.title}</h3>
-              <div className={`grid grid-cols-1 ${section.title === "COMBO'S" ? '' : 'md:grid-cols-2'} gap-6`}>
+            <div key={idx} className="relative">
+              {/* Section Title with Connecting Line */}
+              <div className="flex items-center mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 whitespace-nowrap pr-4">
+                  {section.title}
+                </h3>
+                <div className="flex-1 h-px bg-gradient-to-r from-yellow-400/50 via-amber-500/30 to-transparent"></div>
+              </div>
+              
+              {/* Menu Items Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {section.items.map((item, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    className="group relative"
-                    variants={fadeInUp}
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
+                    className="relative bg-black/80 rounded-xl p-4 sm:p-6 border border-slate-800 backdrop-blur-xl hover:scale-105 transition-transform duration-200"
                   >
-                    <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-                    <div className="relative bg-black/80 rounded-xl p-6 border border-slate-800 backdrop-blur-xl">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-lg font-bold text-white">{item.name}</h4>
-                        <span className="text-yellow-400 font-bold">{item.price}</span>
-                      </div>
-                      {item.desc && <p className="text-slate-400 text-sm">{item.desc}</p>}
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="text-base sm:text-lg md:text-lg font-bold text-white">{item.name}</h4>
+                      <span className="text-yellow-400 font-bold text-sm sm:text-base">{item.price}</span>
                     </div>
-                  </motion.div>
+                    {item.desc && <p className="text-slate-400 text-xs sm:text-sm">{item.desc}</p>}
+                  </div>
                 ))}
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
