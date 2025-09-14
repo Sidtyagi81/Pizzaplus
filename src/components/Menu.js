@@ -1,10 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const fadeInUp = {
-    hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
-  };
   
   const staggerContainer = {
     hidden: { opacity: 0 },
@@ -27,7 +23,6 @@ const Menu = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-transparent bg-clip-text"
           >
             Our Complete Menu
@@ -208,8 +203,7 @@ const Menu = () => {
                   { name: "Margherita (Double Cheese)", price: "160/-" },
                 ].map((item, index) => (
                   <motion.div 
-                    key={index} 
-                    variants={fadeInUp}
+                    key={index}
                     className="group relative"
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -259,8 +253,7 @@ const Menu = () => {
                   },
                 ].map((item, index) => (
                   <motion.div 
-                    key={index} 
-                    variants={fadeInUp}
+                    key={index}
                     className="group relative"
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}

@@ -23,8 +23,8 @@ const Footer = () => {
               {/* Phone Numbers with Click-to-Call */}
               <p className="flex items-center flex-wrap">
                 <Phone className="w-4 h-4 mr-2 text-yellow-400" />
-                <a href="tel:9355215478" className="hover:text-yellow-400 mr-4">9355215478</a>
                 <a href="tel:8865981598" className="hover:text-yellow-400 mr-4">8865981598</a>
+                <a href="tel:9355215478" className="hover:text-yellow-400 mr-4">9355215478</a>
                 <a href="tel:9368508518" className="hover:text-yellow-400">9368508518</a>
               </p>
 
