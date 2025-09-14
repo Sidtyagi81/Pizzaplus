@@ -82,6 +82,12 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition-all duration-300 shadow-lg hover:shadow-xl"
+              onClick={() => {
+                const orderSection = document.getElementById("order");
+                if (orderSection) {
+                  orderSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Order Now
             </motion.button>
@@ -126,7 +132,12 @@ const Navbar = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
-                onClick={() => scrollToSection('#menu')}
+                onClick={() => {
+                  const orderSection = document.getElementById("order");
+                  if (orderSection) {
+                    orderSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="w-full bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-2 px-3 rounded-lg text-center transition-all duration-300 shadow-lg"
               >
                 Order Now

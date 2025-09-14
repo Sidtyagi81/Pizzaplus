@@ -20,7 +20,7 @@ import OfferSection from "./OfferSection";
 
 const LandingPage = () => {
   const { scrollY } = useScroll();
-  
+
   const stats = [
     { icon: DollarSign, value: "50+", label: "Pizza Varieties" },
     { icon: Users, value: "1000+", label: "Happy Customers" },
@@ -39,7 +39,7 @@ const LandingPage = () => {
   // Animation variants
   const fadeInSmooth = {
     hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
   const staggerContainer = {
@@ -52,12 +52,12 @@ const LandingPage = () => {
     }
   };
 
-  
+
   return (
     <div className="min-h-screen bg-black text-slate-50 font-sans overflow-hidden" id="home">
       {/* Navbar */}
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-24 relative pt-20 md:pt-24">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/90 to-black blur-3xl"></div>
@@ -78,7 +78,7 @@ const LandingPage = () => {
                   </span>
                 </h1>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -99,11 +99,11 @@ const LandingPage = () => {
                 <p>
                   Experience the perfect blend of authentic flavors and premium ingredients in every bite.
                 </p>
-                
+
                 <p>
                   From classic Margherita to exotic Tandoori varieties, we serve happiness on every plate.
                 </p>
-                
+
                 <p>
                   Fresh ingredients, authentic recipes, and unbeatable prices — that&apos;s our promise to you.
                 </p>
@@ -115,7 +115,15 @@ const LandingPage = () => {
                 transition={{ duration: 1, delay: 0.8 }}
                 className="mt-12"
               >
-                <button className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-xl text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <button
+                  onClick={() => {
+                    const orderSection = document.getElementById("order");
+                    if (orderSection) {
+                      orderSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-xl text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
                   Order Now!
                 </button>
               </motion.div>
@@ -137,157 +145,157 @@ const LandingPage = () => {
                 >
                   {/* Pizza Crust */}
                   <div className="absolute inset-4 rounded-full bg-gradient-to-br from-yellow-300 to-orange-400"></div>
-                  
+
                   {/* Animated Toppings */}
                   <motion.div
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.1, 1],
                       opacity: [0.7, 1, 0.7]
                     }}
-                    transition={{ 
-                      duration: 3, 
-                      repeat: Infinity, 
-                      ease: "easeInOut" 
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
                     }}
                     className="absolute inset-8 rounded-full"
                   >
                     {/* Cheese */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-200 opacity-80"></div>
-                    
+
                     {/* Pepperoni */}
                     <motion.div
-                      animate={{ 
+                      animate={{
                         y: [0, -10, 0],
                         scale: [1, 1.1, 1]
                       }}
-                      transition={{ 
-                        duration: 2, 
-                        repeat: Infinity, 
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
                         delay: 0.5,
-                        ease: "easeInOut" 
+                        ease: "easeInOut"
                       }}
                       className="absolute top-8 left-12 w-6 h-6 bg-red-500 rounded-full shadow-lg"
                     ></motion.div>
                     <motion.div
-                      animate={{ 
+                      animate={{
                         y: [0, 10, 0],
                         scale: [1, 1.1, 1]
                       }}
-                      transition={{ 
-                        duration: 2.5, 
-                        repeat: Infinity, 
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
                         delay: 1,
-                        ease: "easeInOut" 
+                        ease: "easeInOut"
                       }}
                       className="absolute top-16 right-16 w-5 h-5 bg-red-500 rounded-full shadow-lg"
                     ></motion.div>
                     <motion.div
-                      animate={{ 
+                      animate={{
                         y: [0, -8, 0],
                         scale: [1, 1.1, 1]
                       }}
-                      transition={{ 
-                        duration: 2.2, 
-                        repeat: Infinity, 
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
                         delay: 1.5,
-                        ease: "easeInOut" 
+                        ease: "easeInOut"
                       }}
                       className="absolute bottom-20 left-20 w-4 h-4 bg-red-500 rounded-full shadow-lg"
                     ></motion.div>
-                    
+
                     {/* Vegetables */}
                     <motion.div
-                      animate={{ 
+                      animate={{
                         rotate: [0, 180, 360],
                         scale: [1, 1.2, 1]
                       }}
-                      transition={{ 
-                        duration: 4, 
-                        repeat: Infinity, 
-                        ease: "easeInOut" 
+                      transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut"
                       }}
                       className="absolute top-12 right-8 w-3 h-3 bg-green-500 rounded-full shadow-lg"
                     ></motion.div>
                     <motion.div
-                      animate={{ 
+                      animate={{
                         rotate: [360, 180, 0],
                         scale: [1, 1.2, 1]
                       }}
-                      transition={{ 
-                        duration: 3.5, 
-                        repeat: Infinity, 
+                      transition={{
+                        duration: 3.5,
+                        repeat: Infinity,
                         delay: 0.8,
-                        ease: "easeInOut" 
+                        ease: "easeInOut"
                       }}
                       className="absolute bottom-16 right-12 w-2 h-2 bg-green-400 rounded-full shadow-lg"
                     ></motion.div>
                     <motion.div
-                      animate={{ 
+                      animate={{
                         rotate: [0, -180, -360],
                         scale: [1, 1.2, 1]
                       }}
-                      transition={{ 
-                        duration: 3.8, 
-                        repeat: Infinity, 
+                      transition={{
+                        duration: 3.8,
+                        repeat: Infinity,
                         delay: 1.2,
-                        ease: "easeInOut" 
+                        ease: "easeInOut"
                       }}
                       className="absolute bottom-8 left-16 w-3 h-3 bg-green-500 rounded-full shadow-lg"
                     ></motion.div>
-                    
+
                     {/* Cheese Strings */}
                     <motion.div
-                      animate={{ 
+                      animate={{
                         opacity: [0.3, 0.8, 0.3],
                         scale: [1, 1.1, 1]
                       }}
-                      transition={{ 
-                        duration: 2.8, 
-                        repeat: Infinity, 
-                        ease: "easeInOut" 
+                      transition={{
+                        duration: 2.8,
+                        repeat: Infinity,
+                        ease: "easeInOut"
                       }}
                       className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-yellow-300 rounded-full shadow-lg"
                     ></motion.div>
                   </motion.div>
-                  
+
                   {/* Floating Steam Effect */}
                   <motion.div
-                    animate={{ 
+                    animate={{
                       y: [0, -20, 0],
                       opacity: [0, 0.6, 0]
                     }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity, 
-                      ease: "easeOut" 
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeOut"
                     }}
                     className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-1 h-8 bg-white/30 rounded-full blur-sm"
                   ></motion.div>
                   <motion.div
-                    animate={{ 
+                    animate={{
                       y: [0, -25, 0],
                       opacity: [0, 0.4, 0]
                     }}
-                    transition={{ 
-                      duration: 2.5, 
-                      repeat: Infinity, 
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
                       delay: 0.5,
-                      ease: "easeOut" 
+                      ease: "easeOut"
                     }}
                     className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-1 h-6 bg-white/20 rounded-full blur-sm"
                   ></motion.div>
                 </motion.div>
-                
+
                 {/* Floating Pizza Slices */}
                 <motion.div
-                  animate={{ 
+                  animate={{
                     y: [0, -15, 0],
                     rotate: [0, 5, 0]
                   }}
-                  transition={{ 
-                    duration: 3, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
                   }}
                   className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-top-8 md:-right-8 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full shadow-lg border-2 border-orange-400"
                 >
@@ -295,50 +303,50 @@ const LandingPage = () => {
                   <div className="absolute top-1 left-1 sm:top-2 sm:left-2 w-1 h-1 sm:w-2 sm:h-2 bg-red-500 rounded-full"></div>
                   <div className="absolute bottom-1 right-1 sm:bottom-3 sm:right-3 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-green-500 rounded-full"></div>
                 </motion.div>
-                
+
                 <motion.div
-                  animate={{ 
+                  animate={{
                     y: [0, -20, 0],
                     rotate: [0, -8, 0]
                   }}
-                  transition={{ 
-                    duration: 3.5, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
                     delay: 1,
-                    ease: "easeInOut" 
+                    ease: "easeInOut"
                   }}
                   className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full shadow-lg border-2 border-orange-400"
                 >
                   <div className="absolute inset-0.5 sm:inset-1 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-200"></div>
                   <div className="absolute top-0.5 left-0.5 sm:top-1 sm:left-1 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-red-500 rounded-full"></div>
                 </motion.div>
-                
+
                 {/* Floating Ingredients */}
                 <motion.div
-                  animate={{ 
+                  animate={{
                     x: [0, 20, 0],
                     y: [0, -10, 0],
                     rotate: [0, 180, 360]
                   }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
                   }}
                   className="absolute top-4 left-4 w-4 h-4 bg-red-500 rounded-full shadow-lg"
                 ></motion.div>
-                
+
                 <motion.div
-                  animate={{ 
+                  animate={{
                     x: [0, -15, 0],
                     y: [0, -15, 0],
                     rotate: [360, 180, 0]
                   }}
-                  transition={{ 
-                    duration: 3.8, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 3.8,
+                    repeat: Infinity,
                     delay: 1.5,
-                    ease: "easeInOut" 
+                    ease: "easeInOut"
                   }}
                   className="absolute bottom-4 right-4 w-3 h-3 bg-green-500 rounded-full shadow-lg"
                 ></motion.div>
@@ -351,7 +359,7 @@ const LandingPage = () => {
       {/* Our Mission Section */}
       <section className="py-24 px-4 sm:px-6 md:px-24 relative" id="mission">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/90 to-black blur-3xl"></div>
-        <motion.h2 
+        <motion.h2
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -360,7 +368,7 @@ const LandingPage = () => {
         >
           Our Menu
         </motion.h2>
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -387,8 +395,8 @@ const LandingPage = () => {
               icon: "💰",
             },
           ].map((step, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               variants={fadeInSmooth}
               className="group relative h-full"
               whileHover={{ scale: 1.03 }}
@@ -398,7 +406,7 @@ const LandingPage = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
               <div className="relative h-full bg-black/80 rounded-xl p-6 sm:p-8 md:p-10 border border-slate-800 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
                 <div>
-                  <motion.div 
+                  <motion.div
                     className="text-4xl sm:text-5xl mb-4 sm:mb-6"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 400 }}
@@ -416,7 +424,7 @@ const LandingPage = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -428,18 +436,18 @@ const LandingPage = () => {
           </p>
         </motion.div>
       </section>
-          
+
       {/* Offer Section */}
       <OfferSection />
 
       {/* Menu Section */}
       <Menu />
-          
+
       {/* Stats Section */}
       <section className="py-14 px-4 sm:px-6 md:px-14 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/90 to-black blur-3xl"></div>
         <div className="max-w-6xl mx-auto relative">
-          <motion.h2 
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -448,7 +456,7 @@ const LandingPage = () => {
           >
             Why Choose Us
           </motion.h2>
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -456,8 +464,8 @@ const LandingPage = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6"
           >
             {stats.map((stat, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 variants={fadeInSmooth}
                 className="group relative text-center"
               >
@@ -476,12 +484,12 @@ const LandingPage = () => {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Contact Section */}
       <Getintouch />
 
       {/* Trust Badges */}
-      <motion.section 
+      <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -491,8 +499,8 @@ const LandingPage = () => {
         <div className="max-w-4xl mx-auto px-6 md:px-24">
           <div className="flex justify-center space-x-8">
             {trustBadges.map((badge, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 whileHover={{ scale: 1.1 }}
                 className="flex items-center text-slate-400 group transition-all duration-300 hover:text-yellow-400"
               >
@@ -505,10 +513,10 @@ const LandingPage = () => {
       </motion.section>
 
       {/* Footer */}
-      <Footer/>
-            
-      
-      
+      <Footer />
+
+
+
       {/* Parallax effect for background elements */}
       <motion.div
         className="fixed inset-0 pointer-events-none z-[-1]"
@@ -517,7 +525,7 @@ const LandingPage = () => {
           opacity: useTransform(scrollY, [0, 1000], [1, 0.3])
         }}
       />
-      
+
       <style>{`
         @keyframes marquee {
           0% {
