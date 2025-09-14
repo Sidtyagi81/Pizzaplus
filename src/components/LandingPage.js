@@ -17,6 +17,8 @@ import Navbar from "./Navbar";
 import Menu from "./Menu";
 import Getintouch from "./Getintouch";
 import OfferSection from "./OfferSection";
+import PromoSection from "./PromoSection";
+import CombosSection from "./CombosSection";
 
 const LandingPage = () => {
   const { scrollY } = useScroll();
@@ -442,6 +444,13 @@ const LandingPage = () => {
 
       {/* Menu Section */}
       <Menu />
+
+      
+          
+      {/* Combos Section */}
+      <CombosSection />
+      {/* Promo Section */}
+      <PromoSection />
 
       {/* Stats Section */}
       <section className="py-14 px-4 sm:px-6 md:px-14 relative">

@@ -70,7 +70,22 @@ const Menu = () => {
         { name: 'Margherita', desc: '(Double Cheese)', price: '160/-' },
       ],
     },
+    {
+      title: 'EXTRAS & ADD-ONS',
+      items: [
+        { name: 'Extra Cheese (P)', price: '30/-' },
+        { name: 'Extra Cheese (M)', price: '40/-' },
+        { name: 'Cheese Burst (P)', price: '40/-' },
+        { name: 'Cheese Burst (M)', price: '60/-' },
+        { name: 'Extra Toppings (Small)', desc: 'Onion, Capsicum, Mushroom, Tomato, SweetCorn, Paneer, Jalapeno, Red Paprika', price: '30/-' },
+        { name: 'Extra Toppings (Medium)', desc: 'Onion, Capsicum, Mushroom, Tomato, SweetCorn, Paneer, Jalapeno, Red Paprika', price: '40/-' },
+        { name: 'Saulted French Fries', price: '40/-' },
+        { name: 'Cheese French Fries', price: '70/-' },
+        { name: 'Cold Drinks (250ml Glass)', price: '25/-' },
+      ],
+    },
   ];
+  
 
   return (
     <section className="py-16 px-4 sm:px-6 md:px-16 relative" id="menu">

@@ -32,7 +32,7 @@ const Footer = () => {
               {/* Email */}
               <p className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-yellow-400" />
-                order@pizzaplus.com
+                pizzaplus120@gmail.com
               </p>
 
 
@@ -65,9 +65,8 @@ const Footer = () => {
               © 2025 by Pizza Plus+.
             </p>
             <div className="flex space-x-6">
-              <a href="https://www.facebook.com/pizzaplusplus.in" className="text-slate-400 hover:text-yellow-400 transition-colors">Facebook</a>
-              <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">Instagram</a>
-              <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">WhatsApp</a>
+              <a href="https://www.facebook.com/share/18vEgPzrR3/" className="text-slate-400 hover:text-yellow-400 transition-colors">Facebook</a>
+              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=z9nyxcs" className="text-slate-400 hover:text-yellow-400 transition-colors">Instagram</a>
               <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">Zomato</a>
             </div>
           </div>
