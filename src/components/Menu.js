@@ -66,8 +66,8 @@ const Menu = () => {
       items: [
         { name: 'Single Topping Pizza', desc: 'Choose Single (Onion, Tomato, Capsicum, Sweet Corn)', price: '80/-' },
         { name: 'Double Topping Pizza', desc: 'Choose Double (Onion, Paneer, Sweet Corn, Green Chilli)', price: '90/-' },
-        { name: 'Triple Topping Pizza', desc: 'Choose Triple (Onion, Tomato, Capsicum, Green Chilli)', price: '99/-' },
-        { name: 'Margherita', desc: '(Double Cheese)', price: '160/-' },
+        { name: 'Triple Topping Pizza', desc: 'Choose Triple (Onion, Tomato, Capsicum, Green Chilli)', price: '99/- | 160/-' },
+        { name: 'Margherita', desc: '(Double Cheese)', price: '99/- | 160/-' },
       ],
     },
     {
@@ -79,7 +79,7 @@ const Menu = () => {
         { name: 'Cheese Burst (M)', price: '60/-' },
         { name: 'Extra Toppings (Small)', desc: 'Onion, Capsicum, Mushroom, Tomato, SweetCorn, Paneer, Jalapeno, Red Paprika', price: '30/-' },
         { name: 'Extra Toppings (Medium)', desc: 'Onion, Capsicum, Mushroom, Tomato, SweetCorn, Paneer, Jalapeno, Red Paprika', price: '40/-' },
-        { name: 'Saulted French Fries', price: '40/-' },
+        { name: 'Salted French Fries', price: '40/-' },
         { name: 'Cheese French Fries', price: '70/-' },
         { name: 'Cold Drinks (250ml Glass)', price: '25/-' },
       ],
