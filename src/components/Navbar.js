@@ -44,7 +44,7 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-24">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 md:px-24">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <motion.div
