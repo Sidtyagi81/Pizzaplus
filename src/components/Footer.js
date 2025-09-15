@@ -66,7 +66,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6">
               <a href="https://www.facebook.com/share/18vEgPzrR3/" className="text-slate-400 hover:text-yellow-400 transition-colors">Facebook</a>
-              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=z9nyxcs" className="text-slate-400 hover:text-yellow-400 transition-colors">Instagram</a>
+              <a href="https://www.instagram.com/pizzaplus_120" className="text-slate-400 hover:text-yellow-400 transition-colors">Instagram</a>
               <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">Zomato</a>
             </div>
           </div>
