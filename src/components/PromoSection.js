@@ -30,7 +30,7 @@ const PromoSection = () => {
         <div className="flex justify-center space-x-6">
           <motion.a
             whileHover={{ scale: 1.1 }}
-            href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=z9nyxcs" // replace with your Instagram link
+            href="https://www.instagram.com/pizzaplus_120/" // replace with your Instagram link
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-xl shadow-lg hover:shadow-xl transition"
